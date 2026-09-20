@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Tanu ❤️</title>
+<title>For Tanu 💌</title>
 
 <style>
 * {
@@ -14,61 +14,69 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background:
-        radial-gradient(circle at 20% 20%, #7b1fa2 0%, transparent 25%),
-        radial-gradient(circle at 80% 80%, #ad1457 0%, transparent 25%),
-        linear-gradient(135deg, #160021, #35003f, #180020);
+    font-family: "Arial", sans-serif;
     color: white;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 20% 10%, #ff4f9a55, transparent 28%),
+        radial-gradient(circle at 80% 90%, #9c27b055, transparent 30%),
+        linear-gradient(135deg, #120018, #26002f, #100015);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
     padding: 20px;
 }
 
 /* Stars */
+
 .star {
     position: fixed;
     width: 3px;
     height: 3px;
     background: white;
     border-radius: 50%;
-    opacity: 0.7;
+    opacity: .7;
     animation: twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle {
-    from { opacity: 0.2; }
+    from { opacity: .2; }
     to { opacity: 1; }
 }
 
-/* Main card */
-.card {
+/* Main */
+
+.container {
     width: min(92vw, 520px);
-    padding: 30px 24px;
-    border-radius: 25px;
-
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.20);
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 0 35px rgba(255, 64, 129, 0.25),
-        inset 0 0 20px rgba(255,255,255,0.04);
-
-    text-align: center;
     position: relative;
-    z-index: 2;
-
-    animation: appear 1.2s ease;
+    z-index: 5;
 }
 
-@keyframes appear {
+.card {
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 28px;
+
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.18);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 0 60px rgba(255, 64, 129, .20),
+        inset 0 0 30px rgba(255,255,255,.03);
+
+    animation: cardIn 1.3s ease;
+}
+
+@keyframes cardIn {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(40px) scale(.94);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -76,121 +84,179 @@ body {
 }
 
 /* Heart */
-.big-heart {
-    font-size: 55px;
-    animation: heartbeat 1.3s infinite;
-    margin-bottom: 10px;
+
+.main-heart {
+    font-size: 65px;
+    animation: heartbeat 1.4s infinite;
+    filter: drop-shadow(0 0 18px #ff4081);
 }
 
 @keyframes heartbeat {
-    0%, 100% {
+    0%,100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.18);
     }
 }
 
+.small-line {
+    color: #ffc4df;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
 h1 {
-    margin: 5px 0 8px;
-    font-size: clamp(28px, 8vw, 42px);
+    font-size: clamp(30px, 8vw, 43px);
+    margin: 10px 0;
 }
 
-.subtitle {
-    color: #ffd1ec;
-    font-size: 14px;
-    margin-bottom: 22px;
+.name {
+    color: #ff80ab;
+    text-shadow: 0 0 18px #ff4081;
 }
 
-.message {
-    background: rgba(0,0,0,0.20);
-    padding: 20px;
-    border-radius: 18px;
-    line-height: 1.7;
+/* Typing */
+
+.typing {
+    min-height: 25px;
+    color: #ffd5e7;
     font-size: 15px;
 }
 
-.highlight {
-    color: #ff80ab;
+/* Letter */
+
+.letter {
+    margin-top: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,64,129,.08)
+        );
+
+    border-radius: 20px;
+    padding: 22px 18px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    line-height: 1.75;
+    font-size: 15px;
+}
+
+.dear {
+    color: #ffb6d2;
     font-size: 20px;
     font-weight: bold;
 }
 
+.special {
+    color: #ff80ab;
+    font-size: 22px;
+    font-weight: bold;
+
+    text-shadow: 0 0 12px #ff4081;
+}
+
+.divider {
+    margin: 18px auto;
+    width: 90px;
+    height: 1px;
+    background: #ff80ab;
+    opacity: .5;
+}
+
+/* Question */
+
 .question {
-    margin-top: 25px;
+    margin-top: 28px;
     font-size: 19px;
     font-weight: bold;
-    color: #fff;
+    line-height: 1.5;
+}
+
+.question span {
+    color: #ff80ab;
 }
 
 /* Buttons */
+
 .buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 button {
     border: none;
-    padding: 13px 18px;
     border-radius: 30px;
+    padding: 13px 19px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.25s;
+    transition: .25s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+button:active {
+    transform: scale(.96);
 }
 
 .yes {
-    background: #ff4081;
     color: white;
+    background: linear-gradient(135deg,#ff4081,#e91e63);
+    box-shadow: 0 5px 20px #ff408155;
 }
 
-.time {
+.think {
     background: white;
     color: #d81b60;
 }
 
 .no {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,.12);
     color: white;
 }
 
-button:hover {
-    transform: scale(1.07);
-}
-
-button:active {
-    transform: scale(0.96);
-}
+/* Response */
 
 .response {
-    min-height: 45px;
+    min-height: 55px;
     margin-top: 20px;
-    font-size: 15px;
-    color: #ffd1e5;
-    line-height: 1.5;
+    color: #ffd2e5;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
+/* Footer */
+
 .footer {
-    margin-top: 20px;
+    margin-top: 22px;
     font-size: 11px;
-    color: #dcb8d5;
+    color: #d9b5d0;
 }
 
 /* Floating hearts */
-.heart {
+
+.float {
     position: fixed;
     bottom: -30px;
-    font-size: 20px;
-    animation: floatUp linear forwards;
     pointer-events: none;
     z-index: 1;
+
+    animation: floatUp linear forwards;
 }
 
 @keyframes floatUp {
-    from {
+
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0;
     }
@@ -199,57 +265,54 @@ button:active {
         opacity: 1;
     }
 
-    to {
+    100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
 }
 
 /* Mobile */
-@media (max-width: 500px) {
+
+@media(max-width:500px) {
 
     body {
         padding: 14px;
-        align-items: center;
     }
 
     .card {
-        width: 100%;
-        padding: 25px 17px;
-        border-radius: 22px;
+        padding: 28px 16px;
+        border-radius: 24px;
     }
 
-    .big-heart {
-        font-size: 48px;
+    .main-heart {
+        font-size: 55px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
-    .message {
-        padding: 17px 14px;
+    .letter {
         font-size: 14px;
-        line-height: 1.65;
+        padding: 19px 14px;
     }
 
-    .highlight {
-        font-size: 19px;
+    .special {
+        font-size: 20px;
     }
 
     .question {
         font-size: 17px;
     }
 
-    button {
-        width: 100%;
-        max-width: 260px;
-        padding: 13px;
-    }
-
     .buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    button {
+        width: 90%;
+        max-width: 280px;
     }
 }
 </style>
@@ -257,64 +320,81 @@ button:active {
 
 <body>
 
+<div class="container">
+
 <div class="card">
 
-    <div class="big-heart">💖</div>
+    <div class="main-heart">💖</div>
 
-    <h1>Hey Tanu... ✨</h1>
-
-    <div class="subtitle">
-        I made something small... just for you ❤️
+    <div class="small-line">
+        A little something from my heart...
     </div>
 
-    <div class="message">
+    <h1>
+        Hey <span class="name">Tanu</span> 🌸
+    </h1>
+
+    <div class="typing" id="typing"></div>
+
+    <div class="letter">
+
+        <div class="dear">
+            Dear Tanu... 💌
+        </div>
+
+        <div class="divider"></div>
 
         <p>
-            <b>Dear Tanu... 🌸</b>
+            काही लोक आयुष्यात येतात...
+            आणि नकळत ते <b>special</b> होऊन जातात.
         </p>
 
         <p>
-            काही feelings अशा असतात,
-            ज्या शब्दांमध्ये सांगणं थोडं difficult असतं...
+            तुझ्याबद्दलही माझ्या मनात
+            काहीतरी असंच आहे. 🌷
         </p>
 
         <p>
-            पण आज मनातलं थोडंसं सांगावंसं वाटलं.
+            कधी कधी तुला पाहिलं की
+            मनात एक छोटीशी smile येते...
+            आणि कधी कधी वाटतं,
+            <b>"तिला हे सांगावं का?"</b> ❤️
         </p>
 
-        <p class="highlight">
+        <p class="special">
             मला तू खूप आवडतेस. ❤️
         </p>
 
         <p>
-            You are someone special to me.
-            आणि मला तुझ्याशी अजून थोडं बोलायला,
-            तुला अजून चांगलं जाणून घ्यायला आवडेल. 🌷
+            I don't want to rush anything.
+            मला फक्त तुझ्याशी अजून थोडं बोलता यावं,
+            तुला अजून चांगलं ओळखता यावं,
+            एवढीच इच्छा आहे. ✨
         </p>
 
         <p>
-            No pressure, no expectations...
-            फक्त मनापासून सांगितलं. 😊
+            म्हणून आज मनातलं थोडंसं
+            धाडस करून सांगितलं. 🌸
         </p>
 
     </div>
 
     <div class="question">
-        Tanu... 💕<br><br>
-        Will you give me a chance to know you better?
+        Tanu... 💕<br>
+        <span>Will you give me a chance to know you better?</span>
     </div>
 
     <div class="buttons">
 
-        <button class="yes" onclick="answerYes()">
+        <button class="yes" onclick="yesAnswer()">
             हो ❤️
         </button>
 
-        <button class="time" onclick="answerTime()">
-            मला विचार करू दे 😊
+        <button class="think" onclick="thinkAnswer()">
+            विचार करू दे 😊
         </button>
 
-        <button class="no" onclick="answerNo()">
+        <button class="no" onclick="noAnswer()">
             नाही
         </button>
 
@@ -328,17 +408,46 @@ button:active {
 
 </div>
 
+</div>
+
 <script>
 
-/* Create stars */
-for (let i = 0; i < 70; i++) {
+/* Typing animation */
+
+const text =
+"Tanu... काहीतरी मनापासून सांगायचं आहे. ❤️";
+
+let index = 0;
+
+function typeText() {
+
+    if(index < text.length) {
+
+        document.getElementById("typing").innerHTML +=
+            text.charAt(index);
+
+        index++;
+
+        setTimeout(typeText, 55);
+    }
+}
+
+typeText();
+
+
+/* Stars */
+
+for(let i = 0; i < 75; i++) {
 
     const star = document.createElement("div");
 
     star.className = "star";
 
-    star.style.left = Math.random() * 100 + "vw";
-    star.style.top = Math.random() * 100 + "vh";
+    star.style.left =
+        Math.random() * 100 + "vw";
+
+    star.style.top =
+        Math.random() * 100 + "vh";
 
     star.style.animationDelay =
         Math.random() * 2 + "s";
@@ -347,75 +456,72 @@ for (let i = 0; i < 70; i++) {
 }
 
 
-/* Answers */
-
-function answerYes() {
-
-    document.getElementById("response").innerHTML =
-    "Tanu... ❤️ Thank you! Let's take it slowly, talk more, laugh more, and make some nice memories. 🌸";
-
-    createHeartBurst();
-}
-
-
-function answerTime() {
-
-    document.getElementById("response").innerHTML =
-    "Of course, Tanu 😊 Take all the time you need. No pressure at all. ❤️";
-}
-
-
-function answerNo() {
-
-    document.getElementById("response").innerHTML =
-    "It's okay, Tanu. ❤️ Thank you for being honest. I will respect your answer.";
-}
-
-
 /* Floating hearts */
 
 function createHeart() {
 
-    const heart = document.createElement("div");
+    const heart =
+        document.createElement("div");
 
-    heart.className = "heart";
+    heart.className = "float";
 
-    const hearts = ["❤️", "💖", "💕", "💗", "💓", "🌸"];
+    const emojis =
+        ["❤️","💖","💕","💗","🌸","✨"];
 
     heart.innerHTML =
-        hearts[Math.floor(Math.random() * hearts.length)];
+        emojis[Math.floor(Math.random()*emojis.length)];
 
     heart.style.left =
-        Math.random() * 100 + "vw";
+        Math.random()*100 + "vw";
 
     heart.style.fontSize =
-        (15 + Math.random() * 20) + "px";
+        (14 + Math.random()*18) + "px";
 
     heart.style.animationDuration =
-        (4 + Math.random() * 5) + "s";
+        (5 + Math.random()*5) + "s";
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 9000);
+    },10000);
+}
+
+setInterval(createHeart,850);
+
+
+/* Answers */
+
+function yesAnswer() {
+
+    document.getElementById("response").innerHTML =
+    "Tanu... ❤️ Thank you. Let's take it slowly, talk more, laugh more, and get to know each other better. 🌸";
+
+    heartBurst();
+}
+
+function thinkAnswer() {
+
+    document.getElementById("response").innerHTML =
+    "Of course 😊 Take your time. No pressure at all. ❤️";
+}
+
+function noAnswer() {
+
+    document.getElementById("response").innerHTML =
+    "It's okay, Tanu. ❤️ Thank you for being honest. I completely respect your answer.";
 }
 
 
-/* Continuous hearts */
+/* Heart burst */
 
-setInterval(createHeart, 900);
+function heartBurst() {
 
-
-/* Extra hearts after YES */
-
-function createHeartBurst() {
-
-    for (let i = 0; i < 20; i++) {
+    for(let i=0;i<25;i++) {
 
         setTimeout(() => {
             createHeart();
-        }, i * 100);
+        },i*100);
 
     }
 }
