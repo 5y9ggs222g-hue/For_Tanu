@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Tanu ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, #7b1fa2 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, #ad1457 0%, transparent 25%),
+        linear-gradient(135deg, #160021, #35003f, #180020);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* Stars */
+.star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+/* Main card */
+.card {
+    width: min(92vw, 520px);
+    padding: 30px 24px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.20);
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 35px rgba(255, 64, 129, 0.25),
+        inset 0 0 20px rgba(255,255,255,0.04);
+
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    animation: appear 1.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Heart */
+.big-heart {
+    font-size: 55px;
+    animation: heartbeat 1.3s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+h1 {
+    margin: 5px 0 8px;
+    font-size: clamp(28px, 8vw, 42px);
+}
+
+.subtitle {
+    color: #ffd1ec;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.message {
+    background: rgba(0,0,0,0.20);
+    padding: 20px;
+    border-radius: 18px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.highlight {
+    color: #ff80ab;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.question {
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 13px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.yes {
+    background: #ff4081;
+    color: white;
+}
+
+.time {
+    background: white;
+    color: #d81b60;
+}
+
+.no {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.response {
+    min-height: 45px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #ffd1e5;
+    line-height: 1.5;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #dcb8d5;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    body {
+        padding: 14px;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        padding: 25px 17px;
+        border-radius: 22px;
+    }
+
+    .big-heart {
+        font-size: 48px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .message {
+        padding: 17px 14px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .highlight {
+        font-size: 19px;
+    }
+
+    .question {
+        font-size: 17px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 260px;
+        padding: 13px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="big-heart">💖</div>
+
+    <h1>Hey Tanu... ✨</h1>
+
+    <div class="subtitle">
+        I made something small... just for you ❤️
+    </div>
+
+    <div class="message">
+
+        <p>
+            <b>Dear Tanu... 🌸</b>
+        </p>
+
+        <p>
+            काही feelings अशा असतात,
+            ज्या शब्दांमध्ये सांगणं थोडं difficult असतं...
+        </p>
+
+        <p>
+            पण आज मनातलं थोडंसं सांगावंसं वाटलं.
+        </p>
+
+        <p class="highlight">
+            मला तू खूप आवडतेस. ❤️
+        </p>
+
+        <p>
+            You are someone special to me.
+            आणि मला तुझ्याशी अजून थोडं बोलायला,
+            तुला अजून चांगलं जाणून घ्यायला आवडेल. 🌷
+        </p>
+
+        <p>
+            No pressure, no expectations...
+            फक्त मनापासून सांगितलं. 😊
+        </p>
+
+    </div>
+
+    <div class="question">
+        Tanu... 💕<br><br>
+        Will you give me a chance to know you better?
+    </div>
+
+    <div class="buttons">
+
+        <button class="yes" onclick="answerYes()">
+            हो ❤️
+        </button>
+
+        <button class="time" onclick="answerTime()">
+            मला विचार करू दे 😊
+        </button>
+
+        <button class="no" onclick="answerNo()">
+            नाही
+        </button>
+
+    </div>
+
+    <div class="response" id="response"></div>
+
+    <div class="footer">
+        Whatever your answer is, I'll respect it. ❤️
+    </div>
+
+</div>
+
+<script>
+
+/* Create stars */
+for (let i = 0; i < 70; i++) {
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+
+    star.style.animationDelay =
+        Math.random() * 2 + "s";
+
+    document.body.appendChild(star);
+}
+
+
+/* Answers */
+
+function answerYes() {
+
+    document.getElementById("response").innerHTML =
+    "Tanu... ❤️ Thank you! Let's take it slowly, talk more, laugh more, and make some nice memories. 🌸";
+
+    createHeartBurst();
+}
+
+
+function answerTime() {
+
+    document.getElementById("response").innerHTML =
+    "Of course, Tanu 😊 Take all the time you need. No pressure at all. ❤️";
+}
+
+
+function answerNo() {
+
+    document.getElementById("response").innerHTML =
+    "It's okay, Tanu. ❤️ Thank you for being honest. I will respect your answer.";
+}
+
+
+/* Floating hearts */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["❤️", "💖", "💕", "💗", "💓", "🌸"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+
+/* Continuous hearts */
+
+setInterval(createHeart, 900);
+
+
+/* Extra hearts after YES */
+
+function createHeartBurst() {
+
+    for (let i = 0; i < 20; i++) {
+
+        setTimeout(() => {
+            createHeart();
+        }, i * 100);
+
+    }
+}
+
+</script>
+
+</body>
+</html>
